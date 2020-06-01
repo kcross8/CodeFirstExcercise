@@ -1,0 +1,26 @@
+﻿@using _527CodeFirstExcercise.Context
+@model IEnumerable<Country>
+@{
+    ViewData["Title"] = "Country Index";
+}
+
+<h1>Country Index</h1>
+
+<table class="table">
+    <tr>
+        <th>Country</th>
+        <th>Capital</th>
+        <th>Continent</th>
+        <th>Population</th>
+    </tr>
+    @foreach (Country c in Model)
+    {
+        <tr>
+            <td><b>@c.Name</b></td>
+            <td>@c.Capital</td>
+            <td>@c.Continent</td>
+            <td>@c.Population</td>
+        </tr>
+    }
+</table>
+
